@@ -36,11 +36,19 @@
             label3 = new Label();
             btnCadastrar = new Button();
             dgvAlunos = new DataGridView();
+            txtCep = new TextBox();
+            label4 = new Label();
+            txtBairro = new TextBox();
+            label5 = new Label();
+            label6 = new Label();
+            txtRua = new TextBox();
+            BtnBuscarCep = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAlunos).BeginInit();
             SuspendLayout();
             // 
             // txtCodigo
             // 
+            txtCodigo.BackColor = SystemColors.ButtonShadow;
             txtCodigo.Location = new Point(454, 51);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(100, 23);
@@ -48,6 +56,7 @@
             // 
             // txtRM
             // 
+            txtRM.BackColor = SystemColors.ButtonShadow;
             txtRM.Location = new Point(454, 109);
             txtRM.Name = "txtRM";
             txtRM.Size = new Size(100, 23);
@@ -55,6 +64,7 @@
             // 
             // txtNome
             // 
+            txtNome.BackColor = SystemColors.ButtonShadow;
             txtNome.Location = new Point(454, 80);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(100, 23);
@@ -89,7 +99,7 @@
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(405, 179);
+            btnCadastrar.Location = new Point(468, 236);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(75, 23);
             btnCadastrar.TabIndex = 5;
@@ -100,16 +110,90 @@
             // dgvAlunos
             // 
             dgvAlunos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAlunos.Location = new Point(354, 254);
+            dgvAlunos.Location = new Point(429, 288);
             dgvAlunos.Name = "dgvAlunos";
             dgvAlunos.Size = new Size(240, 150);
             dgvAlunos.TabIndex = 6;
+            dgvAlunos.CellContentClick += dgvAlunos_CellContentClick;
+            // 
+            // txtCep
+            // 
+            txtCep.BackColor = SystemColors.ButtonShadow;
+            txtCep.Location = new Point(454, 138);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(100, 23);
+            txtCep.TabIndex = 7;
+            txtCep.TextChanged += textBox1_TextChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(337, 146);
+            label4.Name = "label4";
+            label4.Size = new Size(28, 15);
+            label4.TabIndex = 8;
+            label4.Text = "CEP";
+            // 
+            // txtBairro
+            // 
+            txtBairro.BackColor = SystemColors.ButtonShadow;
+            txtBairro.Enabled = false;
+            txtBairro.Location = new Point(454, 167);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(100, 23);
+            txtBairro.TabIndex = 9;
+            txtBairro.TextChanged += txtBairro_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(337, 175);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 10;
+            label5.Text = "Bairro";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(337, 204);
+            label6.Name = "label6";
+            label6.Size = new Size(27, 15);
+            label6.TabIndex = 12;
+            label6.Text = "Rua";
+            // 
+            // txtRua
+            // 
+            txtRua.BackColor = SystemColors.ButtonShadow;
+            txtRua.Enabled = false;
+            txtRua.Location = new Point(454, 196);
+            txtRua.Name = "txtRua";
+            txtRua.Size = new Size(100, 23);
+            txtRua.TabIndex = 11;
+            txtRua.TextChanged += textBox3_TextChanged;
+            // 
+            // BtnBuscarCep
+            // 
+            BtnBuscarCep.Location = new Point(575, 138);
+            BtnBuscarCep.Name = "BtnBuscarCep";
+            BtnBuscarCep.Size = new Size(75, 23);
+            BtnBuscarCep.TabIndex = 13;
+            BtnBuscarCep.Text = "Buscar Cep";
+            BtnBuscarCep.UseVisualStyleBackColor = true;
+            BtnBuscarCep.Click += BtnBuscarCep_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BtnBuscarCep);
+            Controls.Add(label6);
+            Controls.Add(txtRua);
+            Controls.Add(label5);
+            Controls.Add(txtBairro);
+            Controls.Add(label4);
+            Controls.Add(txtCep);
             Controls.Add(dgvAlunos);
             Controls.Add(btnCadastrar);
             Controls.Add(label3);
@@ -119,7 +203,7 @@
             Controls.Add(txtRM);
             Controls.Add(txtCodigo);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Form1Z";
             ((System.ComponentModel.ISupportInitialize)dgvAlunos).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -135,5 +219,12 @@
         private Label label3;
         private Button btnCadastrar;
         private DataGridView dgvAlunos;
+        private TextBox txtCep;
+        private Label label4;
+        private TextBox txtBairro;
+        private Label label5;
+        private Label label6;
+        private TextBox txtRua;
+        private Button BtnBuscarCep;
     }
 }
